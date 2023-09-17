@@ -15,6 +15,11 @@ import idea from "../../assets/feature/idea.png";
 import award from "../../assets/feature/award.png";
 import team from "../../assets/feature/team.png";
 
+import man from "../../assets/feature/projects/man.jpg";
+import whale from "../../assets/feature/projects/whale.jpg";
+import mask from "../../assets/feature/projects/mask.jpg";
+import explosion from "../../assets/feature/projects/explosion.jpg";
+
 export function Home() {
     return(
         <Container>
@@ -64,6 +69,20 @@ export function Home() {
                         <p>Nam venenatis urna aenean quis feugiat et senectus turpis.</p>
                     </div>
                 </div>
+
+                <div className="projects">
+                    <h2>Featured Projects</h2>
+                    <p>We create websites and mobile apps, marketing materials, branding, web design, UX/UI design and illustrations.</p>
+
+                    <div className="projects-image">
+                        <img src={man} alt="" id="man"/>
+                        <img src={mask} alt="" id="mask"/>
+                        <img src={whale} alt="" id="whale"/>
+                        <img src={explosion} alt="" id="explosion"/>
+                    </div>
+                </div>
+
+                <Button title="Explore all" size="M" />
             </Features>
 
 

@@ -149,6 +149,9 @@ export const Apresentation = styled.div`
 export const Features = styled.div`
     width: 100%;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .features {
         width: min(90%, 130rem);
@@ -185,6 +188,99 @@ export const Features = styled.div`
             }
         }
     }
+
+    .projects {
+        width: min(90%, 130rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 130%;
+            color: ${ ({ theme }) => theme.COLORS.GRAY_900};
+        }
+
+        p {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 160%;
+            color: ${ ({ theme }) => theme.COLORS.GRAY_600};
+            max-width: 63.3rem;
+            text-align: center;
+            margin: 2.4rem 0 4rem;
+        }
+    }
+
+    .projects-image {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 41.6rem 30rem;
+
+        grid-template-areas: 
+        "man mask whale"
+        "man explosion explosion";
+
+        grid-gap: 2.4rem;
+
+        margin-bottom: 4rem;
+        
+        > img {
+            transition: filter .3s;
+        }
+
+        > img:hover {
+            filter: saturate(2);
+            cursor: pointer;
+        }
+    }
+
+    #man {
+        grid-area: man;
+        height: 100%;
+        width: 100%;
+    }
+    
+    #mask {
+        grid-area: mask;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    
+    #whale {
+        height: 100%;
+        object-fit: fill;
+        width: 100%;
+        grid-area: whale;
+    }
+    
+    #explosion {
+        width: 100%;
+        grid-area: explosion;
+        height: 100%;
+    }
+
+
+
+    @media(max-width: 700px) {
+        .projects-image {
+            display: flex;
+            flex-direction: column;
+
+            > img {
+                max-width: 41.6rem;
+            } 
+
+            #explosion {
+                height: 41.6rem;
+                object-fit: fill;
+            }
+        }
+    }
+
 
     @media(min-width: 1070px) {
         .features {
