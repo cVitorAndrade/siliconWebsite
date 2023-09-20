@@ -201,6 +201,7 @@ export const Features = styled.div`
             font-weight: 800;
             line-height: 130%;
             color: ${ ({ theme }) => theme.COLORS.GRAY_900};
+            text-align: center;
         }
 
         p {
@@ -295,6 +296,95 @@ export const Features = styled.div`
                 border-right: 1px solid ${ ({ theme }) => theme.COLORS.GRAY_400};
                 padding: 0 2rem;
             }
+        }
+    }
+`;
+
+export const OurCompetencies = styled.div`
+    width: min(90%, 130rem);
+    background-color: ${ ({ theme }) => theme.COLORS.GRAY_100};
+    padding: 7.2rem 0 9.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 9.6rem auto 0;
+    text-align: center;
+
+    > h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 130%;
+            color: ${ ({ theme }) => theme.COLORS.GRAY_900};
+        }
+
+    > p {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 160%;
+        color: ${ ({ theme }) => theme.COLORS.GRAY_600};
+        width: min(90%, 85.6rem);
+        text-align: center;
+        margin: 2.4rem auto 4rem;
+    }
+
+    .accordion-wrapepr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: min(90%, 85.6rem);
+        gap: .8rem;
+
+    }
+
+    .MuiTypography-root {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 160%;
+        color: ${ ({ theme }) => theme.COLORS.GRAY_900};
+        text-align: start;
+    }
+
+    .MuiAccordionDetails-root {
+        display: flex;
+        align-items: center;
+        text-align: justify;
+        gap: 4rem;
+
+        color: ${ ({ theme }) => theme.COLORS.GRAY_700};
+        font-size: 1.6rem;
+        line-height: 160%;
+
+
+        display: flex;
+        flex-direction: column;
+
+        > img {
+            max-width: 20rem;
+        }
+    }
+
+
+    .MuiAccordionSummary-expandIconWrapper {
+        > span {
+            height: 3.6rem;
+            width: 3.6rem;
+        }
+    }
+
+    .MuiButtonBase-root {
+        &:hover .MuiAccordionSummary-expandIconWrapper span {
+            background-color: ${ ({ theme }) => theme.COLORS.PRIMARY};
+
+            > svg {
+                color: #fff;
+            }
+        }
+    }
+
+    @media(min-width: 600px) {
+
+        .MuiAccordionDetails-root {
+            flex-direction: row;
         }
     }
 `;

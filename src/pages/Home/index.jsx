@@ -1,4 +1,4 @@
-import { Apresentation, Container, Features } from "./styles";
+import { Apresentation, Container, Features, OurCompetencies } from "./styles";
 
 import { BiSolidRightArrow } from "react-icons/bi"
 import { MdKeyboardArrowDown } from "react-icons/md"
@@ -19,6 +19,7 @@ import man from "../../assets/feature/projects/man.jpg";
 import whale from "../../assets/feature/projects/whale.jpg";
 import mask from "../../assets/feature/projects/mask.jpg";
 import explosion from "../../assets/feature/projects/explosion.jpg";
+import BasicAccordion from "../../components/BasicAccordion";
 
 export function Home() {
     return(
@@ -85,6 +86,11 @@ export function Home() {
                 <Button title="Explore all" size="M" />
             </Features>
 
+            <OurCompetencies>
+                <h2>Our Competencies</h2>
+                <p>We fully understand your business. If you need to update something, we are more than happy to help you with the services we are providing.</p>
+                <BasicAccordion></BasicAccordion>
+            </OurCompetencies>
 
         </Container>
     )
