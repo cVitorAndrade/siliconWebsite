@@ -10,14 +10,16 @@ export const Container = styled.span`
     -moz-box-shadow: 0px 4px 7px -4px rgba(62,66,101,1);
     box-shadow: 0px 4px 7px -4px rgba(62,66,101,1);
     transition: all .3s ease-in-out;
+    color: var(--svg_color);
+    background-color: var(--icon_bg_color);
 
 
     &:hover {
-        background-color: ${ ({ theme }) => theme.COLORS.PRIMARY};
+        background-color: var(--icon_bg_color_hover);
         cursor: pointer;
 
         > svg {
-            color: #fff;
+            color: var(--svg_color_hover);
         }
     }
 `;

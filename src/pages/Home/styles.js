@@ -4,9 +4,9 @@ export const Container = styled.div`
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    
+
     > .wrapper {
-        background: radial-gradient(circle, rgba(99, 135, 241, 0.1), transparent);
+        background: radial-gradient(circle, rgb(53 93 209 / 18%), transparent);
         padding-bottom: 9.6rem;
         position: relative;
     }
@@ -18,9 +18,9 @@ export const Container = styled.div`
         margin: 8rem auto 0;
         width: min(90%, 130rem);
 
-        span {
+        span:last-child {
             font-size: 1.4rem;
-            color: ${ ({ theme }) => theme.COLORS.GRAY_700};
+            color: var(--gray_700);
             line-height: 160%;
         }
     }
@@ -28,13 +28,13 @@ export const Container = styled.div`
     .line-shape, .bg-shape {
         position: absolute;
         bottom: 0;
-        z-index: -1000;
+        z-index: -1;
     }
     
     .line-shape {
         opacity: 0;
         right: 0;
-        z-index: -9999;
+        z-index: -1;
         max-width: 66rem;
     }
     
@@ -45,8 +45,6 @@ export const Container = styled.div`
             opacity: 1;
         }
     }
-
-    
 `;
 
 export const Apresentation = styled.div`
@@ -65,7 +63,7 @@ export const Apresentation = styled.div`
             margin: 1.6rem 0 6.4rem;
             font-weight: 800;
             line-height: 130%;
-            color: ${ ({ theme }) => theme.COLORS.GRAY_900};
+            color: var(--gray_900);
             text-align: center;
 
             span {
@@ -89,7 +87,7 @@ export const Apresentation = styled.div`
 
         .video-title {
             font-weight: 800;
-            color: ${ ({ theme }) => theme.COLORS.GRAY_800};
+            color: var(--gray_800);
             font-size: 2.4rem;
             line-height: 140%;
         }
@@ -101,7 +99,7 @@ export const Apresentation = styled.div`
         gap: 4rem;
 
         p {
-            color: ${ ({ theme }) => theme.COLORS.GRAY_700};
+            color: var(--gray_700);
             font-size: 1.6rem;
             line-height: 160%;
             text-align: justify;
@@ -148,7 +146,7 @@ export const Apresentation = styled.div`
 
 export const Features = styled.div`
     width: 100%;
-    background-color: #fff;
+    background-color: var(--body_bg_color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,9 +171,10 @@ export const Features = styled.div`
             max-width: 33.6rem;
             background-color: white;
             text-align: center;
+            background-color: transparent;
 
             h3 {
-                color: ${ ({ theme }) => theme.COLORS.GRAY_900};
+                color: var(--gray_900);
                 font-size: 2.4rem;
                 line-height: 140%;
                 font-weight: 800;
@@ -183,7 +182,7 @@ export const Features = styled.div`
             }
 
             p {
-                color: ${ ({ theme }) => theme.COLORS.GRAY_700};
+                color: var(--gray_700);
                 font-size: 1.6rem;
             }
         }
@@ -200,7 +199,7 @@ export const Features = styled.div`
             font-size: 4rem;
             font-weight: 800;
             line-height: 130%;
-            color: ${ ({ theme }) => theme.COLORS.GRAY_900};
+            color: var(--gray_900);
             text-align: center;
         }
 
@@ -208,7 +207,7 @@ export const Features = styled.div`
             font-size: 1.8rem;
             font-weight: 400;
             line-height: 160%;
-            color: ${ ({ theme }) => theme.COLORS.GRAY_600};
+            color: var(--gray_600);
             max-width: 63.3rem;
             text-align: center;
             margin: 2.4rem 0 4rem;
@@ -230,6 +229,7 @@ export const Features = styled.div`
         
         > img {
             transition: filter .3s;
+            border-radius: 8px;
         }
 
         > img:hover {
@@ -302,8 +302,9 @@ export const Features = styled.div`
 
 export const OurCompetencies = styled.div`
     width: min(90%, 130rem);
-    background-color: ${ ({ theme }) => theme.COLORS.GRAY_100};
+    background-color: var(--gray_100);
     padding: 7.2rem 0 9.6rem;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -314,20 +315,20 @@ export const OurCompetencies = styled.div`
             font-size: 4rem;
             font-weight: 800;
             line-height: 130%;
-            color: ${ ({ theme }) => theme.COLORS.GRAY_900};
+            color: var(--gray_900);
         }
 
     > p {
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 160%;
-        color: ${ ({ theme }) => theme.COLORS.GRAY_600};
+        color: var(--gray_600);
         width: min(90%, 85.6rem);
         text-align: center;
         margin: 2.4rem auto 4rem;
     }
 
-    .accordion-wrapepr {
+    .accordion-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -336,11 +337,13 @@ export const OurCompetencies = styled.div`
 
     }
 
+    
+
     .MuiTypography-root {
         font-size: 2rem;
         font-weight: 600;
         line-height: 160%;
-        color: ${ ({ theme }) => theme.COLORS.GRAY_900};
+        color: var(--gray_900);
         text-align: start;
     }
 
@@ -350,7 +353,7 @@ export const OurCompetencies = styled.div`
         text-align: justify;
         gap: 4rem;
 
-        color: ${ ({ theme }) => theme.COLORS.GRAY_700};
+        color: var(--gray_700);
         font-size: 1.6rem;
         line-height: 160%;
 
@@ -369,6 +372,10 @@ export const OurCompetencies = styled.div`
             height: 3.6rem;
             width: 3.6rem;
         }
+    }
+
+    .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+        background-color: var(--bg_accordio_sumary);
     }
 
     .MuiButtonBase-root {

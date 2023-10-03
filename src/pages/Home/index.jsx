@@ -3,7 +3,7 @@ import { Apresentation, Container, Features, OurCompetencies } from "./styles";
 import { BiSolidRightArrow } from "react-icons/bi"
 import { MdKeyboardArrowDown } from "react-icons/md"
 
-import { VideoButton } from "../../components/VideoButton";
+import { IconButton } from "../../components/IconButton";
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 
@@ -19,17 +19,53 @@ import man from "../../assets/feature/projects/man.jpg";
 import whale from "../../assets/feature/projects/whale.jpg";
 import mask from "../../assets/feature/projects/mask.jpg";
 import explosion from "../../assets/feature/projects/explosion.jpg";
+
 import BasicAccordion from "../../components/BasicAccordion";
 
+import { useState, useEffect } from "react";
+
 export function Home() {
+
+    const [isChecked, setIsChecked] = useState(
+        localStorage.getItem('isChecked') === 'true'
+      );
+  
+    const handleChange = () => {
+        const myBody = document.querySelector("body");
+
+        if ( isChecked ) {
+            myBody.classList.remove("dark");
+        }else {
+            myBody.classList.add("dark");            
+        }
+
+        localStorage.setItem('isChecked', !isChecked);
+        setIsChecked(!isChecked);
+
+      };
+
+
+    useEffect(() => {
+        if ( isChecked ) { document.body.classList.add("dark"); }
+      }, []);
+
     return(
-        <Container>
+        <Container className={`${isChecked ? 'dark' : ''}`}>
             <div className="wrapper">
-            <Header />
+            <Header children={
+                <input 
+                    type="checkbox"
+                    name="switch"
+                    id="switch"
+                    checked={isChecked}
+                    onChange={handleChange}
+                />
+            }
+            />
                 <Apresentation>
                 <div className="text">
                     <div className="video-idle">
-                        <VideoButton icon={<BiSolidRightArrow size={10}/>} />
+                        <IconButton icon={<BiSolidRightArrow size={10}/>} />
                         <span className="video-title">Digital Agency Promo</span>
                     </div>
                     <h2>We <span>Transform</span> Your Ideas into Reality</h2>
@@ -45,7 +81,7 @@ export function Home() {
                 <img src={gfxImage} alt="" />
                 </Apresentation>
                 <div className="discover-more">
-                    <VideoButton icon={<MdKeyboardArrowDown size={20} />}/>
+                    <IconButton icon={<MdKeyboardArrowDown size={20} />}/>
                     <span>Discover more</span>
                 </div>
                 <img src={bgShape} alt="" className="bg-shape"/>

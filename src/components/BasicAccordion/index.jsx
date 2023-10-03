@@ -3,7 +3,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { MdKeyboardArrowDown } from "react-icons/md"
-import { VideoButton } from '../VideoButton';
+import { IconButton } from '../IconButton';
 
 import webDevelopment from "../../assets/ourCompetencies/webDevelopment.png";
 import strategy from "../../assets/ourCompetencies/strategy.jpg";
@@ -15,10 +15,10 @@ import digitalAdversiting from "../../assets/ourCompetencies/digitalAdvertising.
 
 export default function BasicAccordion() {
   return (
-    <div className='accordion-wrapepr'>
+    <div className='accordion-wrapper'>
       <Accordion>
         <AccordionSummary
-          expandIcon={<VideoButton icon={<MdKeyboardArrowDown size={20} />} />}
+          expandIcon={<IconButton icon={<MdKeyboardArrowDown size={20} />} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -31,7 +31,7 @@ export default function BasicAccordion() {
       </Accordion>
       <Accordion>
         <AccordionSummary
-          expandIcon={<VideoButton icon={<MdKeyboardArrowDown size={20} />} />}
+          expandIcon={<IconButton icon={<MdKeyboardArrowDown size={20} />} />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
@@ -44,7 +44,7 @@ export default function BasicAccordion() {
       </Accordion>
       <Accordion>
         <AccordionSummary
-          expandIcon={<VideoButton icon={<MdKeyboardArrowDown size={20} />} />}
+          expandIcon={<IconButton icon={<MdKeyboardArrowDown size={20} />} />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
@@ -57,7 +57,7 @@ export default function BasicAccordion() {
       </Accordion>
       <Accordion>
         <AccordionSummary
-          expandIcon={<VideoButton icon={<MdKeyboardArrowDown size={20} />} />}
+          expandIcon={<IconButton icon={<MdKeyboardArrowDown size={20} />} />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
@@ -70,7 +70,7 @@ export default function BasicAccordion() {
       </Accordion>
       <Accordion>
         <AccordionSummary
-          expandIcon={<VideoButton icon={<MdKeyboardArrowDown size={20} />} />}
+          expandIcon={<IconButton icon={<MdKeyboardArrowDown size={20} />} />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >

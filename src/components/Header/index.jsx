@@ -5,7 +5,7 @@ import { Button } from "../Button";
 
 import { useState } from "react";
 
-export function Header() {
+export function Header({ children }) {
     const [active, setActive] = useState(false);
     const handleClick = () => {
         setActive(!active);
@@ -44,7 +44,7 @@ export function Header() {
                     </ul>
                     <div className="toggle-switch">
                         <span>Light</span>
-                        <input type="checkbox" name="switch" id="switch" />
+                        {children}
                         <span>Dark</span>
                     </div>
                     <Button title="contact" size="S"/>
