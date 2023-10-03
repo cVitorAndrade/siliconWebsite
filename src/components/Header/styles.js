@@ -123,10 +123,13 @@ export const Container = styled.header`
             inset: 1;
             display: flex;
             flex-direction: column;
-            top: 100px;
+            top: 130%;
             width: 100%;
             gap: 5rem;
             transition: all .25s ease-in-out;
+            background: radial-gradient(circle, rgb(53 93 209 / 18%), transparent);
+
+            background-color: var(--header_bg);
         }
 
         .hamburguer.active .bar:nth-child(2) {
@@ -142,7 +145,7 @@ export const Container = styled.header`
     }
 
     .dropdown {
-        color: var(--gray_800git );
+        color: var(--gray_800);
         font-weight: 600;
         font-size: 1.6rem;
 

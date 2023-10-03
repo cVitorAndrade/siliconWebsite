@@ -32,6 +32,8 @@ export default createGlobalStyle`
         
         --features_bg_color: #fff;
         --bg_accordion_sumary: #fff;
+
+        --header_bg: #fff;
     }
     
     
@@ -45,18 +47,20 @@ export default createGlobalStyle`
         
         --icon_bg_color: #3F3755;
         --icon_bg_color_hover: #fff;
-
+        
         --svg_color: #fff;
         --svg_color_hover: var(--primary); 
-
+        
         
         --bg-color: #1E142E;
-
+        
         --body_bg_color: #131022;
-
+        
         --bg_accordion_sumary: #2A2738;
-    }
 
+        --header_bg: #1E142E;
+    }
+    
     body {
         font-size: 1.6rem;
         background-color: var(--body_bg_color);
