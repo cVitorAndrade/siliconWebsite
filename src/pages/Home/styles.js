@@ -378,6 +378,10 @@ export const OurCompetencies = styled.div`
         background-color: var(--bg_accordio_sumary);
     }
 
+    .css-67l5gl {
+        background-color: var(--bg_accordio_sumary);
+    }
+
     .MuiButtonBase-root {
         &:hover .MuiAccordionSummary-expandIconWrapper span {
             background-color: ${ ({ theme }) => theme.COLORS.PRIMARY};
