@@ -6,11 +6,11 @@ import { MdKeyboardArrowDown } from "react-icons/md"
 import { IconButton } from '../IconButton';
 
 import webDevelopment from "../../assets/ourCompetencies/webDevelopment.png";
-import strategy from "../../assets/ourCompetencies/strategy.jpg";
-import applicationDevelopment from "../../assets/ourCompetencies/applicationDevelopment.jpg";
+import strategy from "../../assets/ourCompetencies/strategy.png";
+import applicationDevelopment from "../../assets/ourCompetencies/applicationDevelopment.png";
 ;
-import digitalMarketing from "../../assets/ourCompetencies/digitalMarketing.jpg";
-import digitalAdversiting from "../../assets/ourCompetencies/digitalAdvertising.jpg";
+import digitalMarketing from "../../assets/ourCompetencies/digitalMarketing.png";
+import digitalAdversiting from "../../assets/ourCompetencies/digitalAdvertising.png";
 
 
 export default function BasicAccordion() {
