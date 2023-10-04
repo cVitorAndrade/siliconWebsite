@@ -34,6 +34,7 @@ export default createGlobalStyle`
         --bg_accordion_sumary: #fff;
 
         --header_bg: #fff;
+        --img_filter: 0.5;
     }
     
     
@@ -57,8 +58,10 @@ export default createGlobalStyle`
         --body_bg_color: #131022;
         
         --bg_accordion_sumary: #2A2738;
-
+        
         --header_bg: #1E142E;
+        
+        --img_filter: 2;
     }
     
     body {

@@ -1,11 +1,16 @@
-import { Apresentation, Container, Features, OurCompetencies } from "./styles";
+import { Apresentation, Clients, Container, Features, OurCompetencies } from "./styles";
+
+import { Swiper, SwiperSlide } from "swiper/react"
 
 import { BiSolidRightArrow } from "react-icons/bi"
 import { MdKeyboardArrowDown } from "react-icons/md"
+import { MdKeyboardArrowLeft } from "react-icons/md"
+import { MdKeyboardArrowRight } from "react-icons/md"
 
 import { IconButton } from "../../components/IconButton";
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
+import { ClientLogo } from "../../components/ClientLogo";
 
 import gfxImage from "../../assets/gfx.svg";
 import lineShape from "../../assets/line-shape.png";
@@ -23,6 +28,8 @@ import explosion from "../../assets/feature/projects/explosion.jpg";
 import BasicAccordion from "../../components/BasicAccordion";
 
 import { useState, useEffect } from "react";
+
+import { logos } from "../../utils/data";
 
 export function Home() {
 
@@ -127,6 +134,50 @@ export function Home() {
                 <p>We fully understand your business. If you need to update something, we are more than happy to help you with the services we are providing.</p>
                 <BasicAccordion></BasicAccordion>
             </OurCompetencies>
+
+            <Clients>    
+                <div className="clients-title">
+                    <h2>Trusted by Awesome Clients</h2>
+                    <div className="btn-slider-wrapper">
+                        <button id="swiper-button-prev"><IconButton icon={<MdKeyboardArrowLeft size={20}/>} /></button>
+                        <button id="swiper-button-next"><IconButton icon={<MdKeyboardArrowRight size={20}/>} /></button>
+                    </div>
+                </div>
+
+                <Swiper
+                    loop={true}
+                    navigation={{clickable: true, nextEl: "#swiper-button-next", prevEl:"#swiper-button-prev", }}
+                    slidesPerView={2}
+                    spaceBetween={10}
+                    breakpoints={{
+                        375: {
+                            slidesPerView: 2
+                        },
+                        450: {
+                            slidesPerView: 3,
+                            spaceBetween: 16   
+                        },
+                        700: {
+                            slidesPerView: 4
+                        },
+                        1000: {
+                            slidesPerView: 5
+                        },
+                        1200: {
+                            slidesPerView: 6
+                        }
+                    }}
+                    
+                >
+                    {
+                        logos.map( logo => (
+                            <SwiperSlide key={logo.id}>
+                                <ClientLogo image={logo.image} />
+                            </SwiperSlide>
+                        ))
+                    }
+                </Swiper>
+            </Clients>
 
         </Container>
     )

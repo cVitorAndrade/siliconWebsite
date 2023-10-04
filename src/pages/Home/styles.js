@@ -399,3 +399,40 @@ export const OurCompetencies = styled.div`
         }
     }
 `;
+
+export const Clients = styled.div`
+    width: min(90%, 130rem);
+    height: 300px;
+    margin: 9.2rem auto;
+
+
+    .clients-title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4rem;
+
+        > h2 {
+            color: var(--gray_900);
+            font-weight: 800;
+            font-size: 3.2rem;
+            line-height: 130%;
+        }
+    
+        .btn-slider-wrapper {
+            display: flex;
+            gap: 1.6rem;
+
+            > button span {
+                width: 3.6rem;
+                height: 3.6rem;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .swiper-slide {
+        justify-content: center;
+    }
+`;
