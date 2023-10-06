@@ -402,8 +402,7 @@ export const OurCompetencies = styled.div`
 
 export const Clients = styled.div`
     width: min(90%, 130rem);
-    height: 300px;
-    margin: 9.2rem auto;
+    margin: 9.2rem auto 0;
 
 
     .clients-title {
@@ -434,5 +433,92 @@ export const Clients = styled.div`
 
     .swiper-slide {
         justify-content: center;
+    }
+`;
+
+export const ClientTestimonial = styled.div`
+    width: min(90%, 130rem);
+    margin: 11.2rem auto;
+
+    > h2 {
+        font-size: 4rem;
+        font-weight: 800;
+        color: var(--gray_900);
+        line-height: 130%;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    #pagination-element {
+        display: flex;
+        gap: .8rem;
+    }
+    
+    .testimonial-controls {
+        display: flex;
+        width: 36rem;
+        gap: 1rem;
+        align-items: center;
+
+        > button span {
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 0;
+            box-shadow: none;
+            background-color: transparent;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        flex: 1;
+        max-width: 3.6rem;
+        height: 3.6rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gray_800);
+        font-size: 1.2rem;
+        background-color: transparent;
+        font-weight: 700;
+        opacity: 1;
+        line-height: 160%;
+    }
+
+    .swiper-pagination-bullet:hover {
+        background-color: var(--gray_100);
+    }
+
+    .swiper-pagination-bullet-active {
+        color: #fff;
+        background-color: ${ ({ theme }) => theme.COLORS.PRIMARY};
+    }
+
+    .swiper-pagination-bullet-active:hover {
+        background-color: ${ ({ theme }) => theme.COLORS.PRIMARY};
+    }
+
+    .testimonial-controls-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 6rem;
+    }
+
+    .swiperInfo {
+        width: 41.6rem;
+        margin: 0;
+    }
+
+    @media(max-width: 700px) {
+        .testimonial-controls-wrapper {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-controls {
+            max-width: 36rem;
+        }
     }
 `;

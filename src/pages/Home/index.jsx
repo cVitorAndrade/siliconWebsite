@@ -1,4 +1,4 @@
-import { Apresentation, Clients, Container, Features, OurCompetencies } from "./styles";
+import { Apresentation, ClientTestimonial, Clients, Container, Features, OurCompetencies } from "./styles";
 
 import { Swiper, SwiperSlide } from "swiper/react"
 
@@ -29,7 +29,9 @@ import BasicAccordion from "../../components/BasicAccordion";
 
 import { useState, useEffect } from "react";
 
-import { logos } from "../../utils/data";
+import { logos, clients } from "../../utils/data";
+import { Testimonial } from "../../components/Testimonial";
+import { ClientInfo } from "../../components/ClientInfo";
 
 export function Home() {
 
@@ -146,7 +148,7 @@ export function Home() {
 
                 <Swiper
                     loop={true}
-                    navigation={{clickable: true, nextEl: "#swiper-button-next", prevEl:"#swiper-button-prev", }}
+                    navigation={{nextEl: "#swiper-button-next", prevEl:"#swiper-button-prev"}}
                     slidesPerView={2}
                     spaceBetween={10}
                     breakpoints={{
@@ -178,6 +180,68 @@ export function Home() {
                     }
                 </Swiper>
             </Clients>
+
+            <ClientTestimonial>
+                <h2>What They Say About Us</h2>
+
+                <Swiper
+                    navigation={{
+                        nextEl: "#testimonial-swiper-button-next",
+                        prevEl: "#testimonial-swiper-button-prev"
+                    }}
+                    loop={true}
+                    pagination={{
+                        el: "#pagination-element",
+                        clickable: true,
+                        renderBullet: function (index, className) {
+                            return '<span class="' + className + '">' + (index + 1) + '</span>';
+                          }
+                    }}
+                    allowTouchMove={false}
+
+                >
+                    { clients.map( ( client ) => (
+                        <SwiperSlide key={client.id}>
+                            <Testimonial comment={client.comment} image={client.image} rating={client.rating}/>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+
+                <div className="testimonial-controls-wrapper">
+                    <div className="testimonial-controls">
+                        <button id="testimonial-swiper-button-prev">
+                            <IconButton
+                                icon={<MdKeyboardArrowLeft size={16}/>} />
+                        </button>
+                        <div id="pagination-element"></div>
+                        <button id="testimonial-swiper-button-next">
+                            <IconButton
+                                icon={<MdKeyboardArrowRight size={16}/>} />
+                        </button>
+                    </div>
+                    <Swiper 
+                        className="swiperInfo"
+                        navigation={{
+                        nextEl: "#testimonial-swiper-button-next",
+                        prevEl: "#testimonial-swiper-button-prev"
+                        }}
+
+                        loop={true}
+                    pagination={{
+                        el: "#pagination-element",
+                        clickable: true,
+                        renderBullet: function (index, className) {
+                            return '<span class="' + className + '">' + (index + 1) + '</span>';
+                          }
+                    }}
+                    allowTouchMove={false}
+                    >
+                        {clients.map( client => (<SwiperSlide key={client.name}>
+                            <ClientInfo jobTitle={client.jobTitle} logo={client.logo} name={client.name}/>
+                        </SwiperSlide>))}
+                    </Swiper>
+                </div>
+            </ClientTestimonial>
 
         </Container>
     )
