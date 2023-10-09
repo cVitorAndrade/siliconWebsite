@@ -1,4 +1,4 @@
-import { Apresentation, ClientTestimonial, Clients, Container, Features, OurCompetencies } from "./styles";
+import { Apresentation, ClientTestimonial, Clients, Container, Features, OurAtmosphere, OurCompetencies } from "./styles";
 
 import { Swiper, SwiperSlide } from "swiper/react"
 
@@ -24,6 +24,14 @@ import man from "../../assets/feature/projects/man.jpg";
 import whale from "../../assets/feature/projects/whale.jpg";
 import mask from "../../assets/feature/projects/mask.jpg";
 import explosion from "../../assets/feature/projects/explosion.jpg";
+
+import arrows from "../../assets/atmosphere/arrow.png"
+import group from "../../assets/atmosphere/group.png"
+
+import cssda from "../../assets/presentedBy/cssda.png"
+import awwwards from "../../assets/presentedBy/awwwards.svg"
+import fwa from "../../assets/presentedBy/fwa.png"
+import webby from "../../assets/presentedBy/webby.png"
 
 import BasicAccordion from "../../components/BasicAccordion";
 
@@ -242,6 +250,35 @@ export function Home() {
                     </Swiper>
                 </div>
             </ClientTestimonial>
+
+            <OurAtmosphere>
+                    <div className="atmosphere-title">
+                        <h2>Our Creative Atmosphere</h2>
+                        <img src={arrows} alt="" />
+                    </div>
+                    <img src={group} alt=""/>
+                    <div className="award-winning">
+                        <h2>Award-winning designs featured by</h2>
+                        <div>
+                            <div>
+                                <img src={webby} alt="" />
+                                <p>4x mobile of the day</p>
+                            </div>
+                            <div>
+                                <img src={cssda} alt="" />
+                                <p>1x Kudos</p>
+                            </div>
+                            <div>
+                                <img src={awwwards} alt="" />
+                                <p>3x website of the day</p>
+                            </div>
+                            <div>
+                                <img src={fwa} alt="" />
+                                <p>2x best website</p>
+                            </div>
+                        </div>
+                    </div>
+            </OurAtmosphere>
 
         </Container>
     )

@@ -522,3 +522,113 @@ export const ClientTestimonial = styled.div`
         }
     }
 `;
+
+export const OurAtmosphere = styled.div`
+    width: min(90%, 130rem);
+    margin: 11.2rem auto 0;
+
+    .atmosphere-title {
+        max-width: 61.1rem;
+        display: flex;
+        margin-bottom: 2rem;
+        gap: 2.7rem;
+        margin: auto;
+
+        flex-direction: column;
+        align-items: center;
+        
+        > h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 130%;
+            color: var(--gray_900);
+            text-align: center;
+        }
+    }
+    
+    > img {
+        width: 100%;
+        min-height: 30rem;
+    }
+
+    .award-winning {
+        display: flex;
+        margin-top: 9.6rem;
+        align-items: center;
+        flex-direction: column;
+        gap: 4rem;
+
+        > h2 {
+            max-width: 41rem;
+            font-size: 3.2rem;
+            line-height: 130%;
+            font-weight: 800;
+            color: var(--gray_900);
+            text-align: center;
+        }
+
+        > div {
+            display: flex;
+            gap: 5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            div {
+                text-align: center;
+                p {
+                    color: var(--gray_700);
+                    line-height: 160%;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    margin-top: 1.6rem;
+                }
+            }
+            
+        }
+    }
+
+    @media(min-width: 375px) {
+        .atmosphere-title {
+            flex-direction: row;
+            margin: 0 0 2rem;
+            
+            > h2 {
+                width: 25rem;
+                padding-bottom: 2rem;
+            }
+
+            > img {
+                align-self: flex-end;
+            }
+        }
+    }
+
+    @media(min-width: 600px) {
+        .atmosphere-title {
+            justify-content: space-between;
+            gap: 0;
+            
+            height: 9rem;
+
+            > h2 {
+                width: 50rem;
+                align-self: flex-start;
+            }
+        }
+    }
+
+    @media(min-width: 850px) {
+        .award-winning {
+            flex-direction: row;
+            justify-content: space-between;
+
+            > div {
+                flex-wrap: nowrap;
+            }
+
+            > h2 {
+                text-align: left;
+            }
+        }
+    }
+`;
