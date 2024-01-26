@@ -35,6 +35,9 @@ export default createGlobalStyle`
 
         --header_bg: #fff;
         --img_filter: 0.5;
+
+        --bg_post: #fff;
+        --bg_categorie_post: #ECEDFD;
     }
     
     
@@ -44,6 +47,7 @@ export default createGlobalStyle`
         --gray_800: #fff;
         --gray_700: #BEBDC5;
         --gray_600: #898890;
+        --gray_300: #4A4855;
         --gray_100: #1F1C2D;
         
         --icon_bg_color: #3F3755;
@@ -62,6 +66,10 @@ export default createGlobalStyle`
         --header_bg: #1E142E;
         
         --img_filter: 2;
+
+        --bg_post: #2A2838;
+        
+        --bg_categorie_post: #312F4E;
     }
     
     body {

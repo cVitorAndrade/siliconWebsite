@@ -1,4 +1,4 @@
-import { Apresentation, ClientTestimonial, Clients, Container, Features, OurAtmosphere, OurCompetencies } from "./styles";
+import { Apresentation, ClientTestimonial, Clients, Container, Features, LatestPosts, OurAtmosphere, OurCompetencies } from "./styles";
 
 import { Swiper, SwiperSlide } from "swiper/react"
 
@@ -6,6 +6,7 @@ import { BiSolidRightArrow } from "react-icons/bi"
 import { MdKeyboardArrowDown } from "react-icons/md"
 import { MdKeyboardArrowLeft } from "react-icons/md"
 import { MdKeyboardArrowRight } from "react-icons/md"
+import { HiOutlineBookmark } from "react-icons/hi"
 
 import { IconButton } from "../../components/IconButton";
 import { Header } from "../../components/Header";
@@ -32,6 +33,11 @@ import cssda from "../../assets/presentedBy/cssda.png"
 import awwwards from "../../assets/presentedBy/awwwards.svg"
 import fwa from "../../assets/presentedBy/fwa.png"
 import webby from "../../assets/presentedBy/webby.png"
+
+import jeromeBell from "./../../assets/latestPosts/postCreators/JeromeBell.jpg"
+import annetteBlack from "./../../assets/latestPosts/postCreators/AnnetteBlack.jpg"
+import marvinMcKinney from "./../../assets/latestPosts/postCreators/MarvinMcKinney.jpg"
+
 
 import BasicAccordion from "../../components/BasicAccordion";
 
@@ -279,6 +285,76 @@ export function Home() {
                         </div>
                     </div>
             </OurAtmosphere>
+
+            <LatestPosts>
+                <div className="content">
+                    <h2>Latest From Our Blog</h2>
+
+                    <div className="post-wrapper">
+                        <div className="first-section">
+                            <div className="post-image">
+                                <IconButton icon={<HiOutlineBookmark size={18} />} />
+                            </div>
+
+                            <div className="post-info">
+                                <div>
+                                    <span>Digital </span>
+                                    <span>12 hours ago</span>
+                                </div>
+                                
+                                <h5>A study on smartwatch design qualities and people’s preferences</h5>
+
+                                <div className="post-creator">
+                                    <img src={jeromeBell} alt="" />
+                                    <p>Jerome Bell <span>Marketing Specialist</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="second-section">
+                            <div>
+                                <div className="post-image">
+                                    <IconButton icon={<HiOutlineBookmark size={18} />} />
+                                </div>
+
+                                <div className="post-info">
+                                    <div>
+                                        <span>Digital </span>
+                                        <span>1 day</span>
+                                    </div>
+                                    
+                                    <h5>Brand analysis: second step to the brand identity</h5>
+
+                                    <div className="post-creator">
+                                        <img src={annetteBlack} alt="" />
+                                        <p>Annette Black<span>Product Manager</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div className="post-image">
+                                    <IconButton icon={<HiOutlineBookmark size={18} />} />
+                                </div>
+
+                                <div className="post-info">
+                                    <div>
+                                        <span>Digital </span>
+                                        <span>May 24, 2021</span>
+                                    </div>
+                                    
+                                    <h5>How to check the website before releasing it?</h5>
+
+                                    <div className="post-creator">
+                                        <img src={marvinMcKinney} alt="" />
+                                        <p>Marvin McKinney<span>Senior UI/UX Designer</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </LatestPosts>
 
         </Container>
     )

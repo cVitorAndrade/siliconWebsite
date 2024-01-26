@@ -632,3 +632,177 @@ export const OurAtmosphere = styled.div`
         }
     }
 `;
+
+import clock from "../../assets/latestPosts/clock.png"
+import notebook from "../../assets/latestPosts/notebook.png"
+import astronaut from "../../assets/latestPosts/astronaut.png"
+
+export const LatestPosts = styled.div`
+    width: 100%;
+    background-color: var(--gray_100);
+    margin: 11.2rem auto 0;
+    text-align: center;
+
+    .content {
+        width: min(90%, 130rem);
+        margin: auto;
+        padding-top: 9.6rem;
+
+        > h2 {
+            color: var(--gray_900);
+            font-weight: 800;
+            font-size: 4rem;
+            line-height: 130%;
+            margin-bottom: 4rem;
+        }
+    }
+
+    .post-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1.4198fr;
+        grid-template-areas: "first-section second-section";
+        gap: 2.4rem;
+    }
+
+    .first-section {
+        grid-area: first-section;
+        border-radius: .8rem;
+
+        .post-image {
+            background-image: url(${clock});
+            height: 26.4rem;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: .8rem .8rem 0 0;
+        }
+    }
+
+    .second-section {
+        grid-area: second-section;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+
+        > div {
+            height: 24rem;
+            border-radius: .8rem;
+
+
+            .post-image {
+                width: 45%;
+                height: 24rem;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: .8rem 0 0 .8rem;
+            }
+        }
+
+
+        > div {
+            display: flex;
+        }
+
+        > div:first-child {
+            .post-image {
+                background-image: url(${astronaut});
+            }
+
+        }
+
+        > div:last-child {
+            .post-image {
+                background-image: url(${notebook});
+            }
+        }
+
+    }
+
+    .post-image {
+        position: static;
+        display: flex;
+        justify-content: flex-end;
+
+        span {
+            background-color: #fff;
+            color: var(--gray_600);
+            width: 3.6rem;
+            height: 3.6rem;
+            position: relative;
+            right: 16px;
+            top: 16px;
+            margin: 0;
+
+
+
+            &:hover {
+                > svg {
+                    color: ${ ({ theme }) => theme.COLORS.PRIMARY};
+                }
+            }
+        }
+    }
+
+    .post-info {
+        text-align: start;
+        padding: 2.4rem;
+        background-color: var(--bg_post);
+
+        > div:first-child {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.4rem;
+            line-height: 160%;
+
+            span:first-child {
+                color: ${ ({ theme }) => theme.COLORS.PRIMARY};
+                background-color: var(--bg_categorie_post);
+                padding: 0 .8rem;
+                font-weight: 600;
+                border-radius: 4px;
+            }
+
+            span:last-child {
+                color: var(--gray_600);
+            }
+        }
+
+        > h5 {
+            font-weight: 800;
+            color: var(--gray_700);
+            line-height: 140%;
+            font-size: 2rem;
+            margin: 1.6rem 0 2.4rem;
+        }
+    }
+
+    .post-creator {
+        display: flex;
+        gap: 1.6rem;
+        padding-top: 2.4rem;
+        border-top: 1px solid var(--gray_300);
+
+        > img {
+            width: 4.8rem;
+            height: 4.8rem;
+            border-radius: 50%;
+        }
+
+        > p {
+            font-weight: 800;
+            font-size: 1.6rem;
+            line-height: 160%;
+            color: var(--gray_900);
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: var(--gray_600);
+            }
+        }
+    }
+`
